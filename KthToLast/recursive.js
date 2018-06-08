@@ -1,12 +1,12 @@
-const kthToLast = (k, node, count = [1]) => {
-  if (!node.nextElementSibling) return count;
-  const retFromNext = kthToLast(k, node.nextElementSibling, count);
+const recTurnKthToLastRed = (k, node) => {
+  if (!node.nextElementSibling) return 1;
+  const countAhead = recTurnKthToLastRed(k, node.nextElementSibling);
 
-  if (k === retFromNext[0] + 1) {
+  if (k === countAhead + 1) {
     node.style.background = 'red';
   }
 
-  return [retFromNext[0] + 1];
+  return countAhead + 1;
 }
 
-kthToLast(5, document.querySelector('.link'));
+recTurnKthToLastRed(5, document.querySelector('.link'));
