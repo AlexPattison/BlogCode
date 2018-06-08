@@ -23,12 +23,19 @@
   display: inline-block;
 }
 
-.arrow-up {
+.front, .back {
   display: inline-block;
   padding-top: 25px;
   width: 0;
   height: 0;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
+}
+
+.front {
+  border-bottom: 25px solid blue;
+}
+
+.back {
   border-bottom: 25px solid green;
 }
