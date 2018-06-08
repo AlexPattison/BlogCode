@@ -55,9 +55,9 @@ const visualizePointers = (headPlaceHolder, k) => {
       clearInterval(movePointers);
       setTimeout(() => {
         turnKthFromLastRed(document.querySelector('.container'), k);
-      }, 500);
+      }, 1500);
     }
-  }, 500);
+  }, 1500);
 }
 
 let headPointer = document.getElementById('head-pointer');
