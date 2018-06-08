@@ -1,12 +1,11 @@
 (function() {
   const TurnKthFromLastRed = (head, k) => {
-    let count = 1;
     let leader = head;
     let follower = head;
 
     while (leader.nextElementSibling) {
-      if (count < k) {
-        count++;
+      if (k > 1) {
+        k--;
       } else {
         follower = follower.nextElementSibling;
       }
@@ -14,7 +13,7 @@
       leader = leader.nextElementSibling;
     }
 
-    if (count === k) {
+    if (k === 1) {
       follower.style.background = 'red';
     }
   }
